@@ -1,10 +1,10 @@
 import gzip
 import os
-import os
+import sys
 
 opener = gzip.open
 
 if __name__ == "__main__":
-    f = opener(sys.argsv[1], 'wt')
-    f.write(' '.join(sys.argsv[2:]))
+    f = gzip.open(sys.argv[1], 'wt')
+    f.write(' '.join(sys.argv[2:]))
     f.close()
